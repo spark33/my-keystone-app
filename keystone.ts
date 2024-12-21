@@ -67,6 +67,10 @@ export default config(
     },
     lists,
     session,
+    server: {
+      port: process.env.PORT || 3000,
+      cors: { origin: ['*'] }, // Update as needed
+    },
     ui: {
       isAccessAllowed: (context) => !!context.session?.data,
     },
